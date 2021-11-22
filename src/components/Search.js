@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import searchStyles from './Search.module.css';
 
 export const Search = ({ searchMovies, searchTerm, setSearchTerm }) => {
   const [typingTimeout, setTypingTimeout] = useState('');
 
+  // debounced call to search movies while typing
   const onChange = (e) => {
     clearTimeout(typingTimeout);
     setSearchTerm(e.target.value);
