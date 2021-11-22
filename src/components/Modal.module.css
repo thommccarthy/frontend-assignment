@@ -1,0 +1,84 @@
+.modalBackground {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.589);
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+}
+
+.closeIcon {
+  align-self: center;
+  cursor: pointer;
+  max-width: max-content;
+}
+
+.closeIcon img {
+  width: 1.8em;
+}
+
+.closeIcon:hover {
+  opacity: 0.7;
+}
+
+.titleAndClose {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modalWrapper {
+  display: block;
+  padding: 1.5em;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background: white;
+  height: 80vh;
+  max-height: 50em;
+  width: 80vw;
+  max-width: 50em;
+  overflow: auto;
+}
+
+.modalImage {
+  display: block;
+  width: 80%;
+  max-width: 16em;
+}
+
+@media screen and (min-width: 700px) {
+  .modalImage {
+    width: 90%;
+  }
+
+  .imageAndDetailsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    align-content: center;
+  }
+
+  .details {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .modalWrapper {
+    max-width: 58em;
+    padding: 0;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+  }
+
+  .modalImage {
+    max-width: 88%;
+  }
+}

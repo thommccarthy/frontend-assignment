@@ -1,0 +1,31 @@
+.headerWrapper {
+  display: grid;
+  border-bottom: solid grey 2px;
+  margin-top: 2em;
+  padding-bottom: 1.5em;
+}
+
+.timescaleLogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 14em;
+  margin-bottom: 2em;
+}
+
+.searchBox {
+  width: 1em;
+}
+
+@media screen and (min-width: 600px) {
+  .timescaleLogo {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .headerWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1em;
+  }
+}
